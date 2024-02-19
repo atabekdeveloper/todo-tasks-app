@@ -1,0 +1,122 @@
+.tasks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  &.task {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 770px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 500px) {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}
+.task-item {
+  position: relative;
+  background-color: var(--clr-nav);
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 100;
+  &.dark {
+    .task-item__dir {
+      background-color: #1d293e;
+      color: #fff;
+    }
+  }
+  &__dir {
+    position: absolute;
+    top: -5%;
+    right: 10px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: #ffe4e6;
+    color: #e11d48;
+    z-index: 10;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed var(--clr-text);
+    h4 {
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      font-weight: 600;
+      color: var(--clr-text-v2);
+    }
+    p {
+      color: var(--clr-text);
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      display: -webkit-box;
+      overflow: hidden;
+    }
+    &-date {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--clr-text);
+      margin-top: 20px;
+    }
+  }
+  &__status {
+    margin: 0 -10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    span {
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+    &-check {
+      cursor: pointer;
+      transition: transform 0.1s linear;
+      &.active {
+        transform: translateX(15px);
+      }
+      &-ci {
+        font-size: 25px;
+        color: #a7f3d0;
+      }
+      &-ui {
+        font-size: 25px;
+        color: #fde68a;
+      }
+      &-ct {
+        background-color: #a7f3d0;
+        color: #065f46;
+      }
+      &-ut {
+        background-color: #fde68a;
+        color: #92400e;
+      }
+    }
+    &-edit {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      &-icon {
+        font-size: 25px !important;
+        color: var(--clr-text);
+        transition: transform 0.3s linear;
+        cursor: pointer;
+        &.active {
+          color: #f43f5e;
+        }
+        &.active-status {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+}

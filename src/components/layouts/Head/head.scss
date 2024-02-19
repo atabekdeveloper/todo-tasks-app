@@ -1,0 +1,7 @@
+@import '../../../assets/styles/base/mixin';
+.head {
+  padding: 10px 0;
+  color: var(--clr-text-v2);
+  font-weight: 500;
+  @include adaptiv-font(24, 20, 24);
+}

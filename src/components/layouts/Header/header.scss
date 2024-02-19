@@ -1,0 +1,44 @@
+@import '../../../assets/styles/base/mixin';
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  &__block {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  &__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: var(--clr-text);
+    h4 {
+      color: var(--clr-text-v2);
+      font-weight: 700;
+      @include adaptiv-font(20, 10, 20);
+    }
+    p {
+      @include adaptiv-font(18, 12, 18);
+    }
+  }
+  &__today {
+    display: flex;
+    flex-direction: column;
+    color: var(--clr-text);
+    h4 {
+      font-weight: 700;
+      @include adaptiv-font(20, 12, 20);
+    }
+    p {
+      @include adaptiv-font(20, 12, 20);
+    }
+  }
+}

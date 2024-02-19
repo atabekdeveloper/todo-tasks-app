@@ -1,0 +1,41 @@
+@import './abstracts/colors';
+.app {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.5;
+  background-color: var(--clr-bg);
+  &.light {
+    --clr-bg: #e2e8f0;
+    --clr-text: #475569;
+    --clr-text-v2: #475569;
+    --clr-violet: #5b21b6;
+    --clr-nav: #f1f5f9;
+  }
+
+  &.dark {
+    --clr-bg: #0f172a;
+    --clr-text: #94a3b8;
+    --clr-text-v2: #fff;
+    --clr-violet: #5b21b6;
+    --clr-nav: #141e33;
+  }
+}
+.none {
+  pointer-events: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+footer {
+  position: sticky;
+  left: 0;
+  right: 0;
+  top: 100%;
+  bottom: 0;
+  padding: 10px 0;
+  color: var(--clr-text);
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+}

@@ -1,0 +1,42 @@
+.drawer-route {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 256px;
+  height: 100%;
+  overflow: hidden;
+  background-color: #f1f5f9;
+  &.dark {
+    background-color: #141e33;
+    .drawer-route__submenu {
+      h2 {
+        color: #94a3b8;
+      }
+    }
+  }
+  &__submenu {
+    padding: 25px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+    h2 {
+      font-weight: 700;
+      color: #475569;
+    }
+  }
+  &__menu {
+    overflow: auto;
+    position: relative;
+    height: 100%;
+    padding-bottom: 25px;
+    &::-webkit-scrollbar {
+      width: 3px;
+      height: 2px;
+      background-color: #fff;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #ccc;
+    }
+  }
+}
