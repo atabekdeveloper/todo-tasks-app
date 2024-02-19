@@ -65,7 +65,7 @@ const DrawerInfo: React.FC = () => {
           </div>
         </div>
         <div className="drawer-info__bottom">
-          <a href="https://github.com/kiyotaaka" target="_blank" rel="noreferrer">
+          <a href="https://github.com/koujidev" target="_blank" rel="noreferrer">
             {t('author')}
           </a>
         </div>
